@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+    --main-color: #22BAA0;
+    --color-dark: #34425A;
+    --color-white: white;
+    --color-black: black;
+    --color-page-header:#E9edf2;
+    --color-hover-sidebar:#2b384e;
+    --color-page-content: #f1f4f9;
+
+    --text-grey:#b0b0b0;
+    --text-sidebar-grey: #899DC1;
+    --text-Dashboard-grey: #74767d;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    width: 60px;
+    transition: ease 300ms;
+}
+
+#menu-toggle:checked ~ .sidebar .side-header h3 {
+    display: none;
+}
+
+#menu-toggle:checked ~ .main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+}
+
+#menu-toggle:checked ~ .main-content header {
+    left: 60px;
+    width: calc(100% - 60px);
+}
+
+#menu-toggle:checked ~ .sidebar .side-content .profile,
+#menu-toggle:checked ~ .sidebar .side-content .side-menu ul li a small {
+    display: none;
+}
+
+#menu-toggle:checked ~ .sidebar .side-content .side-menu ul li a span {
+    font-size: 1.3rem;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 165px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 100;
+    background: var(--color-dark);
+    transition: ease 300ms;
+}
+
+.side-header {
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 /10%);
+    background: var(--main-color);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 300ms;
+}
+
+.side-header h3 {
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+.side-header span {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.sidebar .side-content{
+    height: calc(100vh - 60px);
+    overflow: auto;
+}
+
+.sidebar .side-content .profile {
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+
+
+.sidebar .side-content .profile img {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    margin: 0 auto .5rem auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid var(--text-sidebar-grey);
+}
+
+.sidebar .side-content .profile h4{
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.sidebar .side-content .profile small{
+    color: var(--text-sidebar-grey);
+    font-weight: 600;
+}
+
+.side-content .side-menu ul{
+    text-align: center;
+}
+
+.side-content .side-menu ul li a {
+    display: block;
+    padding: 1.2rem 0rem;
+}
+
+.side-content .side-menu ul li a:hover {
+    background-color: var(--color-hover-sidebar);
+}
+
+.side-content .side-menu ul li a.active{
+    background: var(--color-hover-sidebar);
+}
+
+.side-content .side-menu ul li a.active span, .side-content .side-menu ul li a.active small{
+    color: var(--color-white);
+}
+
+.side-content .side-menu ul li a span{
+    display: block;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.side-content .side-menu ul li a span, .side-content .side-menu ul li a small{
+    color: var(--text-sidebar-grey);
+}
+
+
+.main-content {
+    margin-left: 165px;
+    width: calc(100% - 165px);
+    transition: margin-left 300ms;
+}
+
+
+
+.main-content .table-responsive table img {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.main-content header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 165px;
+    z-index: 100;
+    height: 60px;
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 /10%);
+    background: var(--color-white);
+    transition: left 300ms;
+}
+
+.main-content header .header-content label{
+    cursor: pointer;
+}
+
+.main-content header .header-content .header-menu label:first-child span{
+    font-size: 1.3rem;
+}
+
+.main-content header .header-content, 
+.main-content header .header-content .header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.main-content header .header-content{
+    justify-content: space-between;
+    padding: 0rem 1rem;
+}
+
+.main-content header .header-content .header-menu{
+    justify-content: flex-end;
+    padding-top: .5rem;
+}
+
+.main-content header .header-content .header-menu label,
+.main-content header .header-content .header-menu div.notify-icon{
+    margin-right: 2rem;
+    position: relative;
+}
+
+.main-content header .header-content .header-menu div.notify-icon span:first-child{
+    font-size: 1.3rem;
+}
+
+.main-content header .header-content .header-menu div.notify-icon span:last-child{
+    position: absolute;
+    background: var(--main-color);
+    height: 16x;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: -5px;
+    top: -5px;
+    color: var(--color-white);
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.main-content header .header-content .header-menu label span,
+.main-content header .header-content .header-menu div.notify-icon span:first-child{
+    font-size: 1.3rem;
+}
+
+.main-content header .header-content .header-menu div.user{
+    display: flex;
+    align-items:center;
+}
+
+.main-content header .header-content .header-menu div.user img{
+    height: 40px;
+    width: 40px;
+    /* margin-top: .5rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.main-content header .header-content .header-menu div.user span:last-child{
+    display: inline-block;
+    margin-left: .3rem;
+    font-size: .8rem;
+}
+
+main{
+    margin-top: 60px;
+}
+
+.main-content main .page-header {
+    padding: 1.3rem 1rem;
+    background: var(--color-page-header);
+    border-bottom: 1px solid #dee2e8;
+}
+
+.main-content main .page-header h1, .main-content main .page-header small{
+    color: var(--text-Dashboard-grey);
+}
+
+.main-content main .page-content{
+    padding: 1.3rem 1rem;
+    background: var(--color-page-content);
+}
+
+.main-content main .page-content .analytics{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.main-content main .page-content .analytics .card  {
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 /10%);
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.main-content main .page-content .analytics .card .card-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content main .page-content .analytics .card .card-head h2{
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.main-content main .page-content .analytics .card .card-head span{
+    color: var(--text-grey);
+    font-size: 3.2rem;
+}
+
+.main-content main .page-content .analytics .card .card-progress small{
+    color: #777;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.main-content main .page-content .analytics .card .card-progress .card-indicator{
+    margin-top: .7rem 0rem ;
+    height: 10px;
+    border-radius: 4px;
+    background: #E9edf2;
+    overflow: hidden;
+}
+
+.main-content main .page-content .analytics .card .card-progress .card-indicator .indicator{
+    height: 10px;
+    border-radius: 4px;
+}
+
+.main-content main .page-content .analytics .card .card-progress .card-indicator .indicator.one{
+    background-color: var(--main-color);
+    width: 80%;
+}
+
+.main-content main .page-content .analytics .card .card-progress .card-indicator .indicator.two{
+    background-color: #11a8c3;
+    width: 70%;
+}
+
+.main-content main .page-content .analytics .card .card-progress .card-indicator .indicator.three{
+    background-color: #f6d433;
+    width: 45%;
+}
+
+.main-content main .page-content .analytics .card .card-progress .card-indicator .indicator.four{
+    background-color: #f25656;
+    width: 55%;
+}
+
+.main-content main .page-content .records {
+    box-shadow: 0px 5px 5px -5px rgb(0 0 0 /10%);
+    background-color: var(--color-white);
+    border-radius: 3px;
+} 
+
+.main-content main .page-content .records .record-header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content main .page-content .records .record-header .add, .main-content main .page-content .records .record-header .browse{
+    display: flex;
+    align-items: center;
+}
+
+.main-content main .page-content .records .record-header .add span{
+    display: inline-block;
+    margin-right : .5rem;
+    font-size: .9rem;
+    color: #666;
+}
+
+.main-content main .page-content .records .record-header .add select, .main-content main .page-content .records .record-header .browse input, .main-content main .page-content .records .record-header .browse select{
+    height: 35px;
+    border: 1px solid var(--text-grey);
+    border-radius: 3px;
+    display: inline-block;
+    width: 75px;
+    padding: 0rem .5rem ;
+    margin-right: .8rem;
+    color: #666;
+} 
+
+input, button, select{
+    outline:none;
+}
+
+.main-content main .page-content .records .record-header .add button {
+    background: var(--main-color);
+    color: var(--color-white);
+    height: 37px;
+    border-radius: 4px;
+    padding: 0rem 1rem;
+    border: none;
+    font-weight: 600;
+}
+
+.main-content main .page-content .records .record-header .browse input{
+    width: 150px;
+}
+
+.main-content main .page-content .records .record-header .browse select{
+    width: 100px;
+}
+
+.main-content main .page-content .records .table-responsive{
+    width: 100%;
+    overflow: auto;
+}
+
+
+.main-content main .page-content .records table{
+    border-collapse: collapse;
+}
+
+.main-content main .page-content .records table thead tr{
+    background: var(--color-page-header);
+}
+
+.main-content main .page-content .records table thead tr th{
+    padding: 1rem 0rem;
+    text-align: left;
+    color: #444;
+    font-size: .9rem;
+}
+
+.main-content main .page-content .records table thead tr th:first-child{
+
+    padding-left: 1rem;
+
+}
+
+.main-content main .page-content .records table tbody tr{
+    border-bottom: 1px solid #dee2e8;
+}
+
+.main-content main .page-content .records table tbody tr td{
+    padding: 1rem 0rem;
+    color: #444;
+}
+
+.main-content main .page-content .records table tbody tr td:first-child{
+    padding-left: 1rem;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.main-content main .page-content .records table tbody tr td .client {
+    display: flex;
+    align-items: center;
+}
+
+.main-content main .page-content .records table tbody tr td .client img{
+    margin-right: .5rem;
+    border: 2px solid #efefef;
+    height: 45px;
+    width: 45px;
+}
+
+.main-content main .page-content .records table tbody tr td .client .client-info h4{
+    color: #555;
+    font-size: .95rem;
+}
+
+.main-content main .page-content .records table tbody tr td .client .client-info small{
+    color: var(--text-Dashboard-grey);
+}
+
+.main-content main .page-content .records table tbody tr td .actions span{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.main-content main .page-content .records table tbody tr td .paid {
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    color: var(--main-color);
+    background: #e5f8ed;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-size: .8rem;
+}
+
+@media only screen and (max-width: 1200px){
+    .main-content main .page-content .analytics{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+@media only screen and (max-width: 768px){
+
+    .main-content main .page-content .analytics{
+        grid-template-columns: 100%;
+    } 
+
+    .sidebar{
+        left:-165px;
+        z-index: 90;
+    }
+
+    .main-content header{
+        left: 0;
+        width: 100%;
+    }
+
+    .main-content{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #menu-toggle:checked ~ .sidebar {
+        left: 0px;
+    }
+
+    .main-content main .page-content .records table thead tr th{
+        text-align: left;
+        font-size: .68rem;
+    }
+
+}
+
