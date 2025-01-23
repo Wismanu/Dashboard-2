@@ -5,15 +5,15 @@ _Este dashboard es un proyecto personal desarrollado para profundizar mis conoci
 # 1800px
 
 <img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1800px.jpeg" align='left' width='460px'>
-<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1800px-2.jpeg" align='' width='480px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1800px-2.jpeg" align='' width='460px'>
 
 # 1200px
-<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1200px-2.jpeg" align='left' width='480px'>
-<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1200px.jpeg" align='' width='488px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1200px-2.jpeg" align='left' width='460px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1200px.jpeg" align='' width='460px'>
 
 # 768px
-<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/768px-2.jpeg" align='left' width='480px'>
-<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/768px.jpeg" align='' width='480px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/768px-2.jpeg" align='left' width='460px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/768px.jpeg" align='' width='460px'>
 
 
 
