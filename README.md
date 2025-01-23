@@ -2,6 +2,21 @@
 
 _Este dashboard es un proyecto personal desarrollado para profundizar mis conocimientos en la creación de interfaces de usuario interactivas y dinámicas, utilizando exclusivamente HTML y CSS._
 
+# 1800px
+
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1800px.jpeg" align='left' width='460px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1800px-2.jpeg" align='' width='480px'>
+
+# 1200px
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1200px-2.jpeg" align='left' width='480px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/1200px.jpeg" align='' width='488px'>
+
+# 768px
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/768px-2.jpeg" align='left' width='480px'>
+<img src="https://github.com/Wismanu/Dashboard-2/blob/main/img/768px.jpeg" align='' width='480px'>
+
+
+
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
